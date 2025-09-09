@@ -3,9 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Your Garden</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+
+        margin: 0;
+        padding: 0;
+        background: url("https://teamtweaks1-blog.s3.us-east-2.amazonaws.com/blog/wp-content/uploads/2021/10/08122042/Effective-Smart-water-management-with-IoT.png")
+          no-repeat center center fixed;
+        background-size: cover; /* tự động co ảnh cho full màn hình */
+      }
+      .card {
+        display: inline-block;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        background: rgb(105, 146, 222);
+      }
+      .card2 {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        background: rgb(29, 132, 163);
+      }
+      .temp {
+        font-size: 24px;
+        color: #e74c3c;
+      }
+      .hum {
+        font-size: 24px;
+        color: #0d49e3;
+      }
+      .sk {
+        font-size: 24px;
+        color: #2ecc71;
+      }
+    </style>
+    <style>
+      a {
+        font-size: 25px;
+        color: rgb(250, 250, 250);
+      }
+      h1 {
+        font-size: 40px;
+        color: rgb(250, 250, 250);
+      }
+      p {
+        font-size: 20px;
+      }
+    </style>
   </head>
   <body>
-    ádhaskjdhkjashdh
+    <h1>Chào mừng đến với Group 7 IOT</h1>
+    <img
+      src="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoasang.png"
+      width="200"
+      alt=""
+    />
+    <p>Chúng tôi đang chăm sóc cho khu vườn của bạn</p>
+    <h3>Dữ liệu về khu vườn của bạn 🌱</h3>
+    <div class="card2">
+      <ul>
+        <li>số cây: 50</li>
+        <li>thời gian trồng: 2 tháng</li>
+        <li>giống cây: cần xa</li>
+      </ul>
+    </div>
+    <style>
+      ul {
+        text-align: left;
+        display: inline-block;
+        margin: 0 auto;
+      }
+    </style>
+
+    <h2>Tình trạng cây trồng</h2>
+    <div class="card">
+      <p class="temp">🌡️Nhiệt độ: <span id="temp"></span> °C</p>
+      <p class="hum">💧Độ ẩm: <span id="hum"></span> %</p>
+      <p class="sk">❤️Sức khỏe: Tốt</p>
+    </div>
+    <script>
+      // Hàm sinh dữ liệu giả ngẫu nhiên
+      function getFakeData() {
+        return {
+          temperature: (20 + Math.random() * 15).toFixed(1), // từ 20 đến 35 °C
+          humidity: (40 + Math.random() * 40).toFixed(1), // từ 40 đến 80 %
+        };
+      }
+
+      // Hàm cập nhật dữ liệu ra HTML
+      function updateData() {
+        let data = getFakeData();
+        document.getElementById("temp").textContent = data.temperature;
+        document.getElementById("hum").textContent = data.humidity;
+      }
+
+      // Gọi lần đầu
+      updateData();
+
+      // Cập nhật mỗi 2 giây
+      setInterval(updateData, 2000);
+    </script>
+    <p></p>
+    <br />
+
+    <a href="https://anhnhat29.github.io/web"> link kiện đã sử dụng</a>
   </body>
 </html>
