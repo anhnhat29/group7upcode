@@ -86,3 +86,10 @@ setInterval(showRandomWeather, 5000);
 // Chạy lần đầu và lặp lại mỗi 2 giây
 updateAll();
 setInterval(updateAll, 2000);
+document.getElementById("sidebarToggle").onclick = function () {
+  document.getElementById("sidebar").style.display = "block";
+};
+// Đóng sidebar
+document.getElementById("closeSidebar").onclick = function () {
+  document.getElementById("sidebar").style.display = "none";
+};

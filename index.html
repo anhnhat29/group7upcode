@@ -185,9 +185,38 @@
     </style>
   </head>
   <body>
-    <!-- HERO -->
+    <!-- Nút menu cho sidebar  -->
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Danh sách">
+      &#9776;
+    </button>
+    <!-- ...existing code... -->
     <section class="hero">
       <div class="hero-content">
+        <!-- XÓA nút sidebarToggle ở đây -->
+        <div id="sidebar" class="sidebar" style="display: none">
+          <button
+            id="closeSidebar"
+            class="close-btn"
+            aria-label="Đóng side bar"
+          >
+            &times;
+          </button>
+          <br />
+          <br />
+          <h2 style="text-align: left">Danh Sách</h2>
+          <ul>
+            <li>
+              <a
+                href="https://anhnhat29.github.io/web"
+                target="_blank"
+                rel="noopener"
+                style="text-align: left"
+              >
+                Linh kiện</a
+              >
+            </li>
+          </ul>
+        </div>
         <h1>Hệ thống giám sát và chăm sóc cây trồng từ xa</h1>
         <p>Nhóm 7 - Môn Internet of Things</p>
       </div>
@@ -260,12 +289,6 @@
     <!-- file js riêng -->
     <script src="main.js"></script>
 
-    <a
-      class="demo-link"
-      href="https://anhnhat29.github.io/web"
-      target="_blank"
-      rel="noopener"
-      >Link các kiện đã sử dụng</a
     >
   </body>
 </html>
