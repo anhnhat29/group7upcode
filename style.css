@@ -9,3 +9,20 @@
   color: white;
   text-align: center;
 }
+.card-container {
+  display: flex; /* xếp ngang các card */
+  justify-content: center; /* căn giữa toàn bộ */
+  align-items: flex-start; /* căn thẳng hàng trên */
+  gap: 20px; /* khoảng cách giữa các card */
+  flex-wrap: wrap; /* nếu màn hình nhỏ thì card tự xuống dòng */
+  margin-top: 20px;
+}
+.weathers {
+  display: none; /* ẩn mặc định */
+  text-align: left;
+  margin-left: 20px;
+}
+
+.weathers.show {
+  display: block; /* khi có class show thì hiện ra */
+}

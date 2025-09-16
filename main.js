@@ -65,6 +65,24 @@ function updateAll() {
   mychart.update();
 }
 
+const weathers = ["sun", "rain", "cloud"];
+
+function showRandomWeather() {
+  // Ẩn tất cả
+  weathers.forEach((id) => {
+    document.getElementById(id).classList.remove("show");
+  });
+
+  // Random 1 trạng thái
+  const randomId = weathers[Math.floor(Math.random() * weathers.length)];
+  document.getElementById(randomId).classList.add("show");
+}
+
+// Gọi lần đầu
+showRandomWeather();
+// Cứ 5 giây đổi 1 lần
+setInterval(showRandomWeather, 5000);
+
 // Chạy lần đầu và lặp lại mỗi 2 giây
 updateAll();
 setInterval(updateAll, 2000);

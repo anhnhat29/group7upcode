@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
     <link
       rel="icon"
-      href="https://th.bing.com/th/id/R.1368f63651e3b20750f870f57c415f7e?rik=IO2t5Rv3Wmqo%2bw&pid=ImgRaw&r=0">
+      href="https://th.bing.com/th/id/R.1368f63651e3b20750f870f57c415f7e?rik=IO2t5Rv3Wmqo%2bw&pid=ImgRaw&r=0"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Your Garden</title>
 
     <style>
@@ -71,9 +73,8 @@
         width: 260px; /* rộng card */
         height: 200px; /* cao card */
         vertical-align: top;
-        margin-right: 16px;  /* khoảng cách giữa các card */
+        margin-right: 16px; /* khoảng cách giữa các card */
         transition: transform 0.2s; /* hiệu ứng hover */
-      
       }
       .card p {
         margin: 8px 0;
@@ -94,17 +95,41 @@
         width: 260px;
         height: 200px;
         vertical-align: top;
-         transition: transform 0.2s; /* hiệu ứng hover */
-        
+        margin-right: 16px; /* khoảng cách giữa các card */
+        transition: transform 0.2s; /* hiệu ứng hover */
       }
-      .card:hover{
+      .card3 {
+        text-align: center;
+        display: inline-block;
+        padding: 10px; /* khoảng cách bên trong */
+        border-radius: 10px; /* bo góc */
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* đổ bóng */
+        background: linear-gradient(
+          180deg,
+          rgb(33, 189, 163),
+          rgb(82, 211, 225)
+        ); /* nền gradient */
+        color: white;
+        width: 260px; /* rộng card */
+        height: 200px; /* cao card */
+        vertical-align: top;
+
+        transition: transform 0.2s; /* hiệu ứng hover */
+      }
+      .card:hover {
         transform: translateY(-5px);
       }
-      
-       .card2:hover{
+
+      .card2:hover {
         transform: translateY(-5px);
       }
-      
+      .card3:hover {
+        transform: translateY(-5px);
+      }
+
+      .card3 .weathers {
+        text-align: left; /* ghi đè: nội dung con căn trái */
+      }
 
       /* Các màu nhỏ cho text trong card (nếu cần) */
       .temp {
@@ -141,9 +166,10 @@
       }
 
       /* Responsive */
-      @media (max-width: 760px) {
+      @media (max-width: 1160px) {
         .card,
-        .card2 {
+        .card2,
+        .card3 {
           width: 100%;
           display: block;
           margin: 8px 0;
@@ -171,9 +197,7 @@
     <div class="container">
       <h1 style="margin-top: 0">Chào mừng đến với Group 7 IOT</h1>
 
-      <div
-        style=" gap: 20px; flex-wrap: wrap; text-align: center"
-      >
+      <div style="gap: 20px; flex-wrap: wrap; text-align: center">
         <div>
           <img
             src="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoasang.png"
@@ -193,55 +217,55 @@
 
         <br />
       </div>
-        <div class="card2" aria-label="Thông tin vườn">
-          <h3 style="margin-top: 0; color: #fff">
-            Dữ liệu về khu vườn của bạn 🌱
-          </h3>
-          <ul class="meta-list">
-            <li>Số cây: <strong>50</strong></li>
-            <li>Thời gian trồng: <strong>2 tháng</strong></li>
-            <li>Giống cây: <strong>cần xa</strong></li>
-          </ul>
-        </div>
-        
-        <div class="card" aria-live="polite" aria-label="Tình trạng cây">
-          <h3 style="margin-top: 0; color: #fff 
-          ">Tình trạng cây trồng</h3>
-          <br>
-          <p class="temp" ; style=" text-align:left">🌡️ Nhiệt độ: <span id="temp">--</span> °C</p> 
-          <p class="hum" ; style=" text-align:left">💧 Độ ẩm: <span id="hum">--</span> %</p>
-          <p class="sk" ; style=" text-align:left">❤️ Sức khỏe: <strong>Tốt</strong></p>
-        </div>
+      <div class="card2" aria-label="Thông tin vườn">
+        <h3 style="margin-top: 0; color: #fff">
+          Dữ liệu về khu vườn của bạn 🌱
+        </h3>
+        <ul class="meta-list">
+          <li>Số cây: <strong>50</strong></li>
+          <li>Thời gian trồng: <strong>2 tháng</strong></li>
+          <li>Giống cây: <strong>cần xa</strong></li>
+        </ul>
+      </div>
+
+      <div class="card" aria-live="polite" aria-label="Tình trạng cây">
+        <h3 style="margin-top: 0; color: #fff">Tình trạng cây trồng</h3>
+        <br />
+        <p class="temp" ; style="text-align: left">
+          🌡️ Nhiệt độ: <span id="temp">--</span> °C
+        </p>
+        <p class="hum" ; style="text-align: left">
+          💧 Độ ẩm: <span id="hum">--</span> %
+        </p>
+        <p class="sk" ; style="text-align: left">
+          ❤️ Sức khỏe: <strong>Tốt</strong>
+        </p>
+      </div>
+
+      <div class="card3" aria-live="polite" aria-label="Thời tiết">
+        <h3 style="margin-top: 0; color: #fff">Thời Tiết</h3>
+        <br />
+        <p id="sun" class="weathers" t>☀️ trời nắng</p>
+        <p id="rain" class="weathers">🌧️ trời mưa</p>
+        <p id="cloud" class="weathers">☁️ trời nhiều mây</p>
       </div>
     </div>
 
-   
-
     <!-- dữ liệu thành biểu đồ -->
     <h2 style="text-align: center">Biểu đồ dữ liệu</h2>
-<canvas id="mychart" height="100px" ></canvas>
+    <canvas id="mychart" height="100px"></canvas>
 
-<!-- import Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<!-- file js riêng -->
-<script src="main.js"></script>
+    <!-- import Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- file js riêng -->
+    <script src="main.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-  <a
-        class="demo-link"
-        href="https://anhnhat29.github.io/web"
-        target="_blank"
-        rel="noopener"
-        >Link các kiện đã sử dụng</a
-      >
+    <a
+      class="demo-link"
+      href="https://anhnhat29.github.io/web"
+      target="_blank"
+      rel="noopener"
+      >Link các kiện đã sử dụng</a
+    >
   </body>
 </html>
