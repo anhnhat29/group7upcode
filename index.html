@@ -72,6 +72,8 @@
         height: 200px; /* cao card */
         vertical-align: top;
         margin-right: 16px;  /* khoảng cách giữa các card */
+        transition: transform 0.2s; /* hiệu ứng hover */
+      
       }
       .card p {
         margin: 8px 0;
@@ -92,7 +94,17 @@
         width: 260px;
         height: 200px;
         vertical-align: top;
+         transition: transform 0.2s; /* hiệu ứng hover */
+        
       }
+      .card:hover{
+        transform: translateY(-5px);
+      }
+      
+       .card2:hover{
+        transform: translateY(-5px);
+      }
+      
 
       /* Các màu nhỏ cho text trong card (nếu cần) */
       .temp {
@@ -207,7 +219,7 @@
 
     <!-- dữ liệu thành biểu đồ -->
     <h2 style="text-align: center">Biểu đồ dữ liệu</h2>
-<canvas id="mychart" height="100px"></canvas>
+<canvas id="mychart" height="100px" ></canvas>
 
 <!-- import Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
