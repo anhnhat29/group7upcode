@@ -1,0 +1,11 @@
+.hero {
+  background: url("https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoasang.png")
+    no-repeat center center;
+
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
