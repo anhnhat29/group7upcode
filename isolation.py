@@ -11,7 +11,6 @@ np.random.seed(3)
 X, _ = make_blobs(n_samples=300, centers=1, cluster_std=.3, center_box=(10,10))
 outliers, _ = make_blobs(n_samples=5, centers=1, cluster_std=.05, center_box=(11,11))
 X = np.concatenate([X,outliers])
-123
 plt.figure(figsize=(7,7))
 plt.scatter(X[:, 0], X[:, 1], marker="o", s=25, edgecolor="b")
 
