@@ -50,10 +50,11 @@ def on_message(client, userdata, message):
 
 client.on_message = on_message
 
-
+# == code của nhật===============
 if __name__ == '__main__':
     # Cho MQTT chạy nền
     client.loop_start()
 
     # Chạy Flask
     socketio.run(app, host='0.0.0.0', port=5000)
+#== end code của nhật===============
